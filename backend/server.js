@@ -8,10 +8,10 @@ const app = express();
 app.use(bodyParser.json());
 
 db.pool.query(
-  `CREATE TABLE lists(
-id INTEGER AUTO_INCREMENT,
-value TEXT,
-PRIMARY KEY (id),
+  `CREATE TABLE lists (
+  id INTEGER AUTO_INCREMENT,
+  value TEXT, 
+  PRIMARY KEY (id)
 )`,
   (err, results, fileds) => {
     console.log("results", results);
