@@ -9,9 +9,9 @@ app.use(bodyParser.json());
 
 db.pool.query(
   `CREATE TABLE lists(
-id INTEGER AUTO_INCREMENT
-value TEXT
-PRIMARY KEY (id)
+id INTEGER AUTO_INCREMENT,
+value TEXT,
+PRIMARY KEY (id),
 )`,
   (err, results, fileds) => {
     console.log("results", results);
