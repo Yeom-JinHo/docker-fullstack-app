@@ -24,7 +24,8 @@ app.listen(5000, () => {
 
 app.get("/api/values", function (req, res, next) {
   db.pool.query("SELECT * FROM lists;", (err, results, fileds) => {
-    if (err) return res.status(500).send(err);
+    // if (err) return res.status(500).send(err);
+    if (err) return res.json(err);
     else return res.json(results);
   });
 });
